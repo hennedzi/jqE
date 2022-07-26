@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title></title>
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"> 
+        </script>
+    </head>
+    <body>
+        
+        <div id="group">
+            <input type="checkbox">checkbox 1
+            <input type="checkbox">checkbox 2
+            <input type="checkbox">checkbox 3
+            <input type="checkbox">checkbox 4
+        </div>
+        <script>   
+        $('#group input:checkbox').click(function(){
+            let count = $(':checkbox:checked').length;
+            if ($(this).is(':checked')) {
+                 count++;
+                 if(count>4){
+                   $(this).prop('checked',false);
+                 }
+            }
+        });
+        </script>
+    </body>
+</html>

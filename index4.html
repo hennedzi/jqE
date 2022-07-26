@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+
+<body>
+    <input id="text" type="text">
+    <p id="result"></p>
+
+    <script>
+        $('#text').bind('input', function () {
+            if($(this).val().length<11){
+                $('#result').html("Осталоась ввести "+(11-($(this).val().length))+"Символов");
+            }
+            else{
+                $('#result').html("Лимит привышен на"+($(this).val().length-11));
+            }
+            
+        });
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <style>
+        #elem {
+            width: 150px;
+            height: 150px;
+            padding: 10px;
+            border: 1px solid green;
+        }
+    </style>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+
+<body>
+    <div id="div">
+        <input type="text" id="w">Ширина
+        <input type="text" id="h">Высота
+    </div>
+    <div id="elem">
+    </div>
+    <script>
+        $('#div').on('input', function () {
+            let w = $('#w').val();
+            let h = $('#h').val();
+            $('#elem').animate({ height: h, width: w }, 1000);
+        });
+    </script>
+</body>
+
+</html>

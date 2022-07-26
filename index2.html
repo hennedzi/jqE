@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+
+<body>
+    <a href="index.html">1е задание</a>
+    <br>
+    <a href="index2.html">2е задание</a>
+    <br>
+    <a href="index3.html">3е задание</a>
+    <br>
+    <a href="index4.html">4е задание</a>
+    <br>
+    <a href="index5.html">5е задание</a>
+    <br>
+    <a href="http://old.code.mu/books/javascript/jquery/">Источники</a>
+    <script>
+        window.onload = function () {
+            Array.from(document.getElementsByTagName("a")).forEach(
+
+                element => {
+                    var site = /localhost/;
+                    var href = element.href;
+                    if (/^(http|https|ftp)/.test(href) && !site.test(href)) {
+                        element.target = "_blank";
+                    }
+                });
+        };
+
+    </script>
+</body>
+
+</html>
